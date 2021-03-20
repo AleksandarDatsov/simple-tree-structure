@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "Aleksandar Datsov",
+    "email": "a.datsov@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/AleksandarDatsov/simple-tree-structure/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Create simple tree structure by predefined json data object",
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "/src/simple-tree-structure.js",
+    "/src/tree-model.ts"      
+  ],
+  "homepage": "https://github.com/AleksandarDatsov/simple-tree-structure#readme",
+  "name": "simple-tree-structure",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksandarDatsov/simple-tree-structure.git"
+  },
+  "version": "1.1.3"
+}
