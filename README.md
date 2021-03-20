@@ -48,16 +48,12 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 First of all i wanna say that this readme file will be updated as soon as I can.
 <br/>
 
-
 STS library allows you to present fast data tree structures with basic functionalities. It is easy to use and stylize.
-
 
 ### Built With
 
@@ -65,11 +61,9 @@ STS library allows you to present fast data tree structures with basic functiona
 * TypeScript
 
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
-
+<--! 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -79,23 +73,26 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm i simple-tree-structure@latest -g
   ```
-
+-->
 ### Installation
-
-1. Clone the repo
+<!-- 1. Clone the repo
    ```sh
    git clone https://github.com/AleksandarDatsov/simple-tree-structure.git
-   ```
-2. Install NPM packages
+   ``` -->
+
+1. Install NPM packages
    ```sh
-   npm install
+  npm i simple-tree-structure@latest -g
    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 As i said earlier STS is easy to use. If you are going to use this library in React/Angular/VueJs project you just need to import it like this in your file:
+
+```javascript
 import { buildTree, getSelectedChildElements } from 'simple-tree-structure/src/simple-tree-structure';
+```
 
 buildTree() accepts 6 parameters:
 1. treeModel - the data we are going to populate our tree with.
