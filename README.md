@@ -184,7 +184,11 @@ And finally if we want to get the selected elements in our STS we can just call
 
     getSelectedChildElements()
 
-and thats all. This function returns the id and description of every selected elements.
+OR
+
+    getEverySelectedElement()
+
+depends on which elements we want to get. This functions return the id and description of selected elements.
 
 STS with isDefaultView parameter set to 'true':
 ![alt text](https://github.com/AleksandarDatsov/simple-tree-structure/blob/master/imgSamples/sts_default_view.png)
