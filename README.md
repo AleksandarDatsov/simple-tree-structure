@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# simple-tree-structure
-=======
+
 <!-- PROJECT LOGO
 <br />
 <p align="center">
