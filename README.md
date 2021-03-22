@@ -187,12 +187,10 @@ And finally if we want to get the selected elements in our STS we can just call
 and thats all. This function returns the id and description of every selected elements.
 
 STS with isDefaultView parameter set to 'true':
-<img src="\simple-tree-structure\imgSamples\sts_default_view.png" width="500px">
-
+![alt text](https://github.com/AleksandarDatsov/simple-tree-structure/blob/master/imgSamples/sts_default_view.png)
 
 STS with isDefaultView parameter set to 'false':
-<img src="\simple-tree-structure\imgSamples\sts_view.png" width="500px">
-
+![alt text](https://github.com/AleksandarDatsov/simple-tree-structure/blob/master/imgSamples/sts_view.png)
 <!-- ROADMAP 
 ## Roadmap
 
