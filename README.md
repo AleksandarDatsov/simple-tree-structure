@@ -13,11 +13,11 @@
     <!--<a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>-->
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>-->
   </p>
 </p>
 
@@ -36,7 +36,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <!-- <li><a href="#prerequisites">Prerequisites</a></li> -->
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -63,7 +63,7 @@ STS library allows you to present fast data tree structures with basic functiona
 
 <!-- GETTING STARTED -->
 ## Getting Started
-<--! 
+<!-- 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -81,8 +81,8 @@ This is an example of how to list things you need to use the software and how to
    ``` -->
 
 1. Install NPM packages
-   ```sh
-  npm i simple-tree-structure@latest -g
+   ```javascript
+    npm i simple-tree-structure@latest -g
    ```
 
 <!-- USAGE EXAMPLES -->
@@ -103,34 +103,30 @@ Here is a sample of how the json model must look like:
    "treeModel":[
       {
          "id":1,
-         "parrentId":0,
-         "description":"___1___ Parrent",
-         "childrens":[
+         "parentId":0,
+         "description":"___1___ Parent",
+         "children":[
             {
                "id":2,
-               "parrentId":1,
+               "parentId":1,
                "description":"___1___ Firstborn Child",
-               "childrens":[
+               "children":[
                   {
                      "id":3,
-                     "parrentId":2,
+                     "parentId":2,
                      "description":"___1___ Firstborn Grand Child",
-                     "childrens":[
+                     "children":[
                         {
                            "id":4,
-                           "parrentId":3,
+                           "parentId":3,
                            "description":"___1___ Firstborn Grand Grand Child",
-                           "childrens":[
-                              
-                           ]
+                           "children":[]
                         },
                         {
                            "id":5,
-                           "parrentId":3,
+                           "parentId":3,
                            "description":"___1___ Second-born Grand Grand Child",
-                           "childrens":[
-                              
-                           ]
+                           "children":[]
                         }
                      ]
                   }
@@ -138,26 +134,22 @@ Here is a sample of how the json model must look like:
             },
             {
                "id":6,
-               "parrentId":2,
+               "parentId":2,
                "description":"___1___ Second-born Child",
-               "childrens":[
-                  
-               ]
+               "children":[]
             }
          ]
       },
       {
          "id":7,
-         "parrentId":0,
-         "description":"___2___ Parrent with one child",
-         "childrens":[
+         "parentId":0,
+         "description":"___2___ Parent with one child",
+         "children":[
             {
                "id":9,
-               "parrentId":7,
+               "parentId":7,
                "description":"___2___ Firstborn Child",
-               "childrens":[
-                  
-               ]
+               "children":[]
             }
          ]
       }
@@ -186,6 +178,20 @@ After we learned this we prepare the container for our STS. In this case the ul 
 The last step is to call buildTree(treeModel, rootElementId, isDefaultView, isParentDescBold, descriptionSpanClass, checkboxClass) with your parameters.
 
 	buildTree(treeModel, 'treeRoot', true, true, someStyle, someStyle);
+
+
+And finally if we want to get the selected elements in our STS we can just call 
+
+    getSelectedChildElements()
+
+and thats all. This function returns the id and description of every selected elements.
+
+STS with isDefaultView parameter set to 'true':
+<img src="\simple-tree-structure\imgSamples\sts_default_view.png" width="500px">
+
+
+STS with isDefaultView parameter set to 'false':
+<img src="\simple-tree-structure\imgSamples\sts_view.png" width="500px">
 
 <!-- ROADMAP 
 ## Roadmap

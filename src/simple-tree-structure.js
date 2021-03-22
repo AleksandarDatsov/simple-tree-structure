@@ -15,6 +15,23 @@ export function getSelectedChildElements() {
     return selectedElements;
 }
 
+export function getEverySelectedElement() {
+    let selectedElements = [];
+
+    [].forEach.call(
+        document.querySelectorAll('.sts_child_checkbox, .sts_root_checkbox'),
+        function (el) {
+            if (el.checked) {
+                selectedElements.push({
+                    id: el.getAttribute('data-item-id'),
+                    description: el.getAttribute('data-item-description')
+                });
+            }
+        });
+
+    return selectedElements;
+}
+
 
 export function buildTree(treeModel, rootElementId, isDefaultView, isParentDescBold, descriptionSpanClass, checkboxClass) {
     if (rootElementId) {
@@ -41,16 +58,16 @@ export function buildTree(treeModel, rootElementId, isDefaultView, isParentDescB
 
 function addItem(parentContainer, treeModel, isParentDescBold, descriptionSpanClass, checkboxClass) {
     if (treeModel) {
-        for (var i = 0; i < treeModel.childrens.length; i++) {
-            var item = treeModel.childrens[i];
+        for (var i = 0; i < treeModel.children.length; i++) {
+            var item = treeModel.children[i];
             var nestedElement = document.createElement('ul');
 
             appendCheckbox(nestedElement, item, checkboxClass);
-            appendDescription(nestedElement, item, item.childrens.length > 0 && isParentDescBold, descriptionSpanClass);
+            appendDescription(nestedElement, item, item.children.length > 0 && isParentDescBold, descriptionSpanClass);
 
             parentContainer.appendChild(nestedElement);
 
-            if (item.childrens.length > 0) {
+            if (item.children.length > 0) {
                 var childrenContainer = document.createElement('div');
                 childrenContainer.setAttribute('id', 'sts_div_' + item.id);
 
@@ -76,7 +93,7 @@ function appendCheckbox(nestedElement, item, checkboxClass) {
         } 
     };
 
-    let hasChildren = item.childrens.length > 0;
+    let hasChildren = item.children.length > 0;
 
     var checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
@@ -84,8 +101,9 @@ function appendCheckbox(nestedElement, item, checkboxClass) {
     checkbox.onclick = (event) => createClickHandler(event);
     checkbox.setAttribute('data-item-id', item.id);
     checkbox.setAttribute('data-item-description', item.description);
-
     checkbox.classList.add(hasChildren ? 'sts_root_checkbox' : 'sts_child_checkbox');
+
+    if (checkbox)
 
     if (checkboxClass)
         checkbox.classList.add(checkboxClass);
@@ -113,7 +131,7 @@ function appendDescription(childrenContainer, item, isParentDescBold, descriptio
         }
     };
 
-    if (item.childrens.length > 0) descriptionSpan.onclick = () => createClickHandler();
+    if (item.children.length > 0) descriptionSpan.onclick = () => createClickHandler();
 
     descriptionSpan.innerHTML = item.description;
 

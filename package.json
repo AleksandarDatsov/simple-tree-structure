@@ -19,6 +19,10 @@
     "/src/simple-tree-structure.js",
     "/src/tree-model.ts"      
   ],
+  "keywords": [
+    "simple tree structure",
+    "tree structure"
+  ],
   "homepage": "https://github.com/AleksandarDatsov/simple-tree-structure#readme",
   "name": "simple-tree-structure",
   "scripts": {
@@ -28,5 +32,5 @@
     "type": "git",
     "url": "git+https://github.com/AleksandarDatsov/simple-tree-structure.git"
   },
-  "version": "1.1.4"
+  "version": "1.2.0"
 }

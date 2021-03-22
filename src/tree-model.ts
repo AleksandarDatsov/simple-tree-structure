@@ -1,13 +1,13 @@
 export interface ITreeModel {
     id: number;
-    parrentId: number;
+    parentId: number;
     description: string;
-    childrens: TreeModel[];
+    children: TreeModel[];
 }
 
 export class TreeModel implements ITreeModel {
     id!: number;
-    parrentId!: number;
+    parentId!: number;
     description!: string;
-    childrens!: TreeModel[];
+    children!: TreeModel[];
 }
